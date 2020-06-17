@@ -1,4 +1,7 @@
 <div class="wrapper">
+    <mat-toolbar>
+        <span style="position: absolute;left: 45%;">Employee Appraisal Form</span>
+    </mat-toolbar>
     <div id="one">
         <div>
             <mat-card>
@@ -7,7 +10,7 @@
 
                     <div class="form-group">
                         <mat-form-field>
-                            <input class="form-control" formControlName="employee_id" type="text" matInput placeholder="Employee ID" required>
+                            <input class="form-control" formControlName="employee_id" type="number" matInput placeholder="Employee ID" required>
                         </mat-form-field>
                     </div>
 
@@ -23,8 +26,8 @@
                             <mat-select class="form-control" formControlName="position">
                                 <mat-option value="Lead">Lead</mat-option>
                                 <mat-option value="Manager">Manager</mat-option>
-                                <mat-option value="Senior Developer">Senior Developer</mat-option>
-                                <mat-option value="Junior Developer">Junior Developer</mat-option>
+                                <mat-option value="Senior ">Senior Developer</mat-option>
+                                <mat-option value="Junior ">Junior Developer</mat-option>
                             </mat-select>
                         </mat-form-field>
                     </div>
@@ -32,9 +35,9 @@
                         <mat-form-field>
                             <mat-label>Department</mat-label>
                             <mat-select class="form-control" formControlName="department">
-                                <mat-option value="Human Resource">Human Resource</mat-option>
-                                <mat-option value="Web department">Web department</mat-option>
-                                <mat-option value="App department">App department</mat-option>
+                                <mat-option value="HR">Human Resource</mat-option>
+                                <mat-option value="Web">Web department</mat-option>
+                                <mat-option value="App">App department</mat-option>
                             </mat-select>
                         </mat-form-field>
                     </div>
@@ -46,24 +49,28 @@
                     </div>
 
                     <div class="form-group">
-                        <mat-slider [max]="max" [min]="min" [step]="step" [thumbLabel]="thumbLabel" formControlName="conduct" placeholder="Conduct" [vertical]="vertical">
+                        <p style="float: left;">{{conduct}}</p>
+                        <mat-slider style="float: left; margin-left: 30px;" [max]="max" [min]="min" [step]="step" [thumbLabel]="thumbLabel" formControlName="conduct" placeholder="Conduct" [vertical]="vertical">
                         </mat-slider>
                     </div>
                     <div class="form-group">
-                        <mat-slider [max]="max" [min]="min" [step]="step" [thumbLabel]="thumbLabel" formControlName="quality" placeholder="Quality" [vertical]="vertical">
+                        <p style="float: left;">{{qual}}</p>
+                        <mat-slider style="float: left; margin-left: 30px;" [max]="max" [min]="min" [step]="step" [thumbLabel]="thumbLabel" formControlName="quality" placeholder="Quality" [vertical]="vertical">
                         </mat-slider>
                     </div>
                     <div class="form-group">
-                        <mat-slider [max]="max" [min]="min" [step]="step" [thumbLabel]="thumbLabel" formControlName="teamwork" placeholder="Teamwork" [vertical]="vertical">
+                        <p style="float: left;">{{team}}</p>
+                        <mat-slider style="float: left; margin-left: 30px;" [max]="max" [min]="min" [step]="step" [thumbLabel]="thumbLabel" formControlName="teamwork" placeholder="Teamwork" [vertical]="vertical">
                         </mat-slider>
                     </div>
                     <div class="form-group">
-                        <mat-slider [max]="max" [min]="min" [step]="step" [thumbLabel]="thumbLabel" formControlName="skill" placeholder="Skill" [vertical]="vertical">
+                        <p style="float: left;">{{skill}}</p>
+                        <mat-slider style="float: left; margin-left: 30px;" [max]="max" [min]="min" [step]="step" [thumbLabel]="thumbLabel" formControlName="skill" placeholder="Skill" [vertical]="vertical">
                         </mat-slider>
                     </div>
                 </form>
             </mat-card>
-            <button mat-raised-button color='primary' (click)='onSubmit()'>SUBMIT</button>
+            <button mat-raised-button color='primary' style="width: 100%;" (click)='onSubmit()'>SUBMIT</button>
         </div>
     </div>
     <div id="two">

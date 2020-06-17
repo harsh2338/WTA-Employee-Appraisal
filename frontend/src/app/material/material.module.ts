@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import * as Material from '@angular/material'
-// import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    // FlexLayoutModule,
     Material.MatToolbarModule,
     Material.MatButtonModule,
     Material.MatIconModule,

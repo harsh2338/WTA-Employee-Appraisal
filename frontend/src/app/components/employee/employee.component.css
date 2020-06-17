@@ -65,7 +65,6 @@
  #two {
      overflow: hidden;
      margin: 20px;
-     /* max-height: 100vw; */
  }
  
  @media screen and (max-width: 1000px) {

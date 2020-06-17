@@ -25,7 +25,10 @@ export class EmployeeComponent implements OnInit {
   vertical = false;
   tickInterval = 1;
 
-
+  conduct="Conduct  :"
+  team="Teamwork :"
+  qual="Quality  :"
+  skill="Skill    :"
 
 
   employeeList
