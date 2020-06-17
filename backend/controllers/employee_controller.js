@@ -70,11 +70,13 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
+    console.log("Recv")
     if (!ObjectId.isValid(req.params.id))
         return res.status(400).send(`No record with given id : ${req.params.id}`);
 
     Employee.findByIdAndRemove(req.params.id, (err, doc) => {
         if (!err) {
+            console.log("DEleted")
             res.send(doc);
         } else {
             console.log('Error in Employee Delete :' + JSON.stringify(err, undefined, 2));

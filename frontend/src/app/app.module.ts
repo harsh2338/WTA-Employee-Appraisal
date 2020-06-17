@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './components/employee/employee.component';
-import { FormComponent } from './components/form/form.component';
+// import { FormComponent } from './components/form/form.component';
 import { MaterialModule } from './material/material.module'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,7 +16,7 @@ import 'hammerjs'
   declarations: [
     AppComponent,
     EmployeeComponent,
-    FormComponent,
+    // FormComponent,
   ],
   imports: [
     BrowserModule,

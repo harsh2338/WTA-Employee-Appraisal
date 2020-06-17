@@ -14,8 +14,11 @@ export class EmployeeService {
       'NoAuth':'True'
     })
   };
+  selectedEmployee: Employee;
+
   url="http://localhost:3000/employee";
   constructor(private http: HttpClient) { }
+
   addData(emp:Employee){
     console.log("sent")
     return this.http.post(this.url,emp,this.noAuthHeader)
@@ -23,5 +26,12 @@ export class EmployeeService {
 
   getEmployees(){
     return this.http.get(this.url,this.noAuthHeader)
+  }
+  updateEmployee(emp: Employee) {
+    return this.http.put(this.url + `/${emp._id}`, emp);
+  }
+
+  deleteEmployee(_id: string) {
+    return this.http.delete(this.url + `/${_id}`);
   }
 }
