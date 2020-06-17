@@ -32,6 +32,8 @@ import * as Material from '@angular/material'
     Material.MatButtonToggleModule,
     Material.MatSliderModule,
     Material.MatTableModule,
+    Material.MatPaginatorModule,
+    Material.MatSortModule,
 
   ],
   exports:[
@@ -58,7 +60,8 @@ import * as Material from '@angular/material'
     Material.MatButtonToggleModule,
     Material.MatSliderModule,
     Material.MatTableModule,
-
+    Material.MatPaginatorModule,
+    Material.MatSortModule,
   ]
 })
 export class MaterialModule { }
